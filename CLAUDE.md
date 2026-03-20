@@ -4,18 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a static website for atango.app hosted on GitHub Pages. The site consists of simple HTML pages with inline CSS styling.
+This is a static website for atango (English vocabulary flashcard iOS app) hosted on GitHub Pages at atango.app. The site consists of simple HTML pages with inline CSS styling.
 
 ## Architecture
 
 - **Static HTML Site**: No build process or framework required
 - **Inline CSS**: All styling is embedded within each HTML file
 - **GitHub Pages Deployment**: Site is deployed automatically via GitHub Pages with custom domain (CNAME file)
+- **Design**: Modern, clean design with Noto Sans JP font, blue-purple gradient accents
 
 ## Page Structure
 
-- `index.html` - Main landing page with all sections inline
-- `services.html`, `about.html`, `contact.html` - Subpages currently showing "under construction" placeholders
+- `index.html` - Main landing page (app features, numbers, pricing, CTA)
+- `contact.html` - Contact page with support email
+- `privacy.html` - Privacy policy page
 
 ## Development Workflow
 

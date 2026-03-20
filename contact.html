@@ -1,96 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Nerdis LLC</title>
+    <title>お問い合わせ - atango</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f8f8f8;
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            background: #fafbff;
+            -webkit-font-smoothing: antialiased;
         }
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
-        nav {
-            background-color: #34495e;
-            padding: 1rem;
-            text-align: center;
+        .header-inner {
+            max-width: 1080px; margin: 0 auto; padding: 0 24px;
+            height: 64px; display: flex; align-items: center; justify-content: space-between;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 1.5rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
+        .logo { font-size: 1.5rem; font-weight: 900; color: #1a1a2e; text-decoration: none; }
+        nav a { color: #555; text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-left: 28px; }
+        nav a:hover { color: #1a1a2e; }
         main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            min-height: 400px;
-        }
-        .under-construction {
+            max-width: 600px; margin: 0 auto;
+            padding: 140px 24px 100px;
             text-align: center;
-            padding: 4rem 2rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-top: 3rem;
         }
-        .construction-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+        h1 { font-size: 1.6rem; font-weight: 900; margin-bottom: 16px; }
+        p { color: #666; line-height: 1.8; font-size: 0.95rem; margin-bottom: 12px; }
+        a.email-link {
+            color: #4A90E2; text-decoration: none; font-weight: 500;
         }
-        .coming-soon {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-top: 2rem;
-        }
+        a.email-link:hover { text-decoration: underline; }
         footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background: #1a1a2e; color: rgba(255,255,255,0.6);
+            text-align: center; padding: 40px 24px; font-size: 0.85rem;
         }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #fff; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Nerdis LLC</h1>
-        <p>Building Tomorrow's Technology Today</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-    </nav>
-    
-    <main>
-        <div class="under-construction">
-            <div class="construction-icon">📧</div>
-            <h2>Contact Us</h2>
-            <p>Our contact form is being set up.</p>
-            <p class="coming-soon">We'll have multiple ways to reach us available soon!</p>
-        </div>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Nerdis LLC. All rights reserved.</p>
-    </footer>
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">atango</a>
+        <nav>
+            <a href="index.html#features">機能</a>
+            <a href="index.html#pricing">料金</a>
+            <a href="privacy.html">プライバシー</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <h1>お問い合わせ</h1>
+    <p>atangoに関するご質問・ご要望・不具合の報告は、<br>下記メールアドレスまでお気軽にご連絡ください。</p>
+    <p><a class="email-link" href="mailto:support@atango.app">support@atango.app</a></p>
+</main>
+<footer>
+    <div>
+        <a href="index.html">ホーム</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+</footer>
 </body>
 </html>
