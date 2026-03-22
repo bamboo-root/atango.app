@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atango - 10万語の英単語帳アプリ</title>
-    <meta name="description" content="カメラで撮って即単語帳に。10万語以上の英単語・熟語・フレーズを収録。科学的な間隔反復アルゴリズムで最短ルートで語彙が身につくiOSアプリ。">
-    <meta property="og:title" content="atango - 10万語の英単語帳アプリ">
-    <meta property="og:description" content="カメラで撮って即単語帳に。科学的な間隔反復アルゴリズムで最短ルートで語彙が身につく。">
+    <title>Atango 最速英単語帳</title>
+    <meta name="description" content="カメラで撮って即単語帳。科学が証明した暗記法で、最短ルートで単語力が身につくiOSアプリ。10万語以上の英単語・熟語・フレーズを収録。">
+    <meta property="og:title" content="Atango 最速英単語帳">
+    <meta property="og:description" content="カメラで撮って即単語帳。科学が証明した暗記法で、最短ルートで単語力が身につく。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://atango.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,19 +78,24 @@
             letter-spacing: -0.02em;
         }
 
-        .hero h1 .accent {
-            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+        .accent {
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
+        .hero .subtitle-lines {
+            max-width: 800px;
             margin: 0 auto 40px;
-            line-height: 1.8;
+        }
+
+        .hero .subtitle-lines p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            font-weight: 500;
         }
 
         .app-store-badge {
@@ -112,7 +117,7 @@
             margin: 0 auto;
             padding: 0 24px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 3fr 4fr;
             gap: 48px;
         }
 
@@ -137,7 +142,7 @@
         .scroll-story-images img {
             position: absolute;
             max-width: 100%;
-            max-height: 80vh;
+            max-height: 65vh;
             object-fit: contain;
             transition: opacity 0.7s ease-in-out;
             opacity: 0;
@@ -163,19 +168,29 @@
 
         .scroll-slide h2 {
             font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-weight: 900;
+            margin-bottom: 40px;
             line-height: 1.35;
-            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .scroll-slide p {
-            font-size: 1.05rem;
+            font-size: 1.35rem;
             color: #555;
             line-height: 1.9;
+        }
+
+        .scroll-slide-inline-img {
+            max-width: 70%;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Mobile scroll story */
@@ -192,17 +207,17 @@
 
         .scroll-story-mobile-section h2 {
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-weight: 900;
+            margin-bottom: 32px;
             line-height: 1.4;
-            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .scroll-story-mobile-section p {
-            font-size: 0.95rem;
+            font-size: 1.25rem;
             color: #555;
             line-height: 1.8;
             max-width: 560px;
@@ -218,7 +233,7 @@
         /* ── Numbers ── */
         .numbers {
             padding: 100px 24px;
-            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
             color: #fff;
             text-align: center;
         }
@@ -269,7 +284,7 @@
         .features .section-sub {
             text-align: center;
             color: #888;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             margin-bottom: 56px;
         }
 
@@ -304,14 +319,14 @@
         }
 
         .feature-card h3 {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
         .feature-card p {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             line-height: 1.7;
         }
 
@@ -330,7 +345,7 @@
 
         .pricing .section-sub {
             color: #888;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             margin-bottom: 48px;
         }
 
@@ -351,7 +366,7 @@
 
         .pricing-card .price-note {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             line-height: 1.7;
             margin-bottom: 24px;
         }
@@ -364,14 +379,14 @@
 
         .pricing-card ul li {
             padding: 9px 0;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             color: #444;
             border-bottom: 1px solid #f0f0f0;
         }
 
         .pricing-card ul li::before {
             content: "\2713";
-            color: #4A90E2;
+            color: #1E5BBF;
             font-weight: 700;
             margin-right: 10px;
         }
@@ -392,7 +407,7 @@
         .cta p {
             color: #666;
             margin-bottom: 32px;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
         }
 
         /* ── Footer ── */
@@ -438,10 +453,8 @@
 
 <header>
     <div class="header-inner">
-        <a href="/" class="logo">atango</a>
+        <a href="/" class="logo">Atango 最速英単語帳</a>
         <nav>
-            <a href="#features">機能</a>
-            <a href="#pricing">料金</a>
             <a href="privacy.html">プライバシー</a>
         </nav>
     </div>
@@ -449,8 +462,12 @@
 
 <!-- Hero -->
 <section class="hero">
-    <h1><span class="accent">撮って、覚えて、忘れない。</span><br>10万語の英単語帳アプリ</h1>
-    <p class="subtitle">カメラで撮るだけで単語帳を作成。科学的な間隔反復アルゴリズムが最適なタイミングで復習を届けるから、最短ルートで語彙が身につきます。</p>
+    <h1>英単語を、<span class="accent">最速</span>で自分のものに。</h1>
+    <div class="subtitle-lines">
+        <p>英文を撮るだけで、<span class="accent">最速</span>で単語帳に。</p>
+        <p>最適なタイミングで復習、<span class="accent">最速</span>で記憶に定着。</p>
+        <p>英検全級の単語帳完備で、<span class="accent">最速</span>で本番に備える。</p>
+    </div>
     <a href="https://apps.apple.com/app/atango" class="app-store-badge">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeからダウンロード">
     </a>
@@ -462,34 +479,59 @@
         <div class="scroll-story-images">
             <div class="img-wrapper">
                 <img src="images/scan.png" alt="カメラスキャン画面" class="active" data-slide="0">
-                <img src="images/themes.png" alt="テーマ別デッキ一覧" data-slide="1">
-                <img src="images/memorize.png" alt="暗記画面" data-slide="2">
+                <img src="images/flashcard.png" alt="単語帳画面" data-slide="0b">
+                <img src="images/memorize.png" alt="暗記画面" data-slide="1">
+                <img src="images/eiken.png" alt="英検対策デッキ" data-slide="2">
                 <img src="images/dictionary.png" alt="単語詳細画面" data-slide="3">
+                <img src="images/themes.png" alt="テーマ別デッキ一覧" data-slide="4">
+                <img src="images/memorize-session.png" alt="広告なしの学習画面" data-slide="5">
+                <img src="images/stats.png" alt="学習統計画面" data-slide="6">
             </div>
         </div>
         <div class="scroll-story-slides">
             <div class="scroll-slide" data-index="0">
                 <div>
-                    <h2>本を読んだら、すぐ単語帳に</h2>
-                    <p>カメラで英文を撮影するだけで、知らない単語を自動検出。ワンタップでデッキに追加できるスキャン機能で、読書や勉強で出会った単語をその場で自分だけの単語帳に変えられます。写真ライブラリからの読み込みやテキスト貼り付けにも対応。</p>
+                    <h2>ページまるっと、<br>一瞬で単語帳へ。</h2>
+                    <p>単語を探して、辞書を引いて、ノートに書く。その時間、すべて学習に使えたら？</p>
+                    <p data-img="0b">本のページをカメラで撮影し、数秒で単語帳が完成。すぐに覚え始められます。</p>
                 </div>
             </div>
             <div class="scroll-slide" data-index="1">
                 <div>
-                    <h2>60以上のテーマ別デッキで、興味から語彙を広げる</h2>
-                    <p>料理・自然・スポーツ・ビジネス・医療・文化など、60以上のテーマ別デッキを収録。興味のある分野から始められるから、楽しく続けられます。英検5級〜1級対応のデッキも級別・品詞別に整理されています。</p>
+                    <h2>あなたの記憶に合わせた、<br>最速の暗記体験。</h2>
+                    <p>間隔反復アルゴリズム（FSRS）が、あなたの記憶の定着度に合わせて最適なタイミングで復習を提示。「忘れかけた瞬間」に復習するから、最も効率よく、記憶に定着します。1日の新規単語数・復習数も自由にカスタマイズ可能。</p>
+                    <img src="images/forgetting_curve.png" alt="忘却曲線と間隔反復の効果" class="scroll-slide-inline-img">
+                    <p>赤は復習しない場合の忘却曲線。青のように最適なタイミング（矢印）で復習することで、記憶が着実に定着していきます。</p>
                 </div>
             </div>
             <div class="scroll-slide" data-index="2">
                 <div>
-                    <h2>覚えたら、忘れない。科学的な復習サイクル</h2>
-                    <p>間隔反復アルゴリズム（FSRS）が、あなたの記憶の定着度に合わせて最適なタイミングで復習を提示。「忘れかけた瞬間」に復習するから、最小の努力で最大の記憶定着を実現します。1日の新規単語数・復習数も自由にカスタマイズ可能。</p>
+                    <h2>試験本番まで、<br>最速で準備する。</h2>
+                    <p>過去問をAIで解析し、級ごとの頻出単語を選別。本当に出る単語だけを集中的に学習できるから、遠回りしません。英検5級から1級まで、級別・品詞別に整理されたデッキを収録。間隔反復で定着させながら、本番までに必要な単語力を確実に仕上げます。</p>
                 </div>
             </div>
             <div class="scroll-slide" data-index="3">
                 <div>
-                    <h2>単語の意味を深く理解する辞書データ</h2>
-                    <p>すべての単語に日本語訳・例文・発音記号・類義語・対義語・派生語を収録。20,000語以上のネイティブ発音音声で正しい発音も身につきます。単なる暗記ではなく、単語の全体像を把握できます。</p>
+                    <h2>10万語の詳細データで、<br>深く理解する。</h2>
+                    <p>すべての単語に日本語訳・例文・発音記号・発音・類義語・対義語・派生語を収録。類義語・対義語・派生語はリンクでつながっているので、関連語をたどりながらスムーズに単語力を広げられます。</p>
+                </div>
+            </div>
+            <div class="scroll-slide" data-index="4">
+                <div>
+                    <h2>テーマ別デッキで、興味から単語力を広げる</h2>
+                    <p>料理・自然・スポーツ・ビジネス・医療・文化など、テーマ別デッキを収録。興味のある分野から始められるから、楽しく続けられます。</p>
+                </div>
+            </div>
+            <div class="scroll-slide" data-index="5">
+                <div>
+                    <h2>無料だけど広告なし。<br>集中を邪魔しない。</h2>
+                    <p>英検3級までの単語にすべての機能が無料で使えます。もちろん広告は一切表示されません。あなたの集中を守り、学習だけに没頭できます。</p>
+                </div>
+            </div>
+            <div class="scroll-slide" data-index="6">
+                <div>
+                    <h2>勉強は一生。<br>支払いは一度。</h2>
+                    <p>買い切り型だから、一度購入すればずっと使えます。サブスクリプションはありません。今後のアップデートもすべて無料です。</p>
                 </div>
             </div>
         </div>
@@ -499,114 +541,46 @@
 <!-- Scroll Story (Mobile) -->
 <div class="scroll-story-mobile">
     <div class="scroll-story-mobile-section">
-        <h2>本を読んだら、すぐ単語帳に</h2>
-        <p>カメラで英文を撮影するだけで、知らない単語を自動検出。ワンタップでデッキに追加できるスキャン機能で、出会った単語をその場で単語帳に。</p>
+        <h2>ページまるっと、<br>一瞬で単語帳へ。</h2>
+        <p>単語を探して、辞書を引いて、ノートに書く。その時間、すべて学習に使えたら？本のページをカメラで撮影し、数秒で単語帳が完成。すぐに覚え始められます。</p>
         <img src="images/scan.png" alt="カメラスキャン画面">
     </div>
     <div class="scroll-story-mobile-section">
-        <h2>60以上のテーマ別デッキで、興味から語彙を広げる</h2>
-        <p>料理・自然・スポーツ・ビジネス・医療・文化など、興味のある分野から始められるから、楽しく続けられます。</p>
-        <img src="images/themes.png" alt="テーマ別デッキ一覧">
-    </div>
-    <div class="scroll-story-mobile-section">
-        <h2>覚えたら、忘れない。科学的な復習サイクル</h2>
+        <h2>あなたの記憶に合わせた、<br>最速の暗記体験。</h2>
         <p>間隔反復アルゴリズム（FSRS）が最適なタイミングで復習を提示。最小の努力で最大の記憶定着を実現。</p>
         <img src="images/memorize.png" alt="暗記画面">
     </div>
     <div class="scroll-story-mobile-section">
-        <h2>単語の意味を深く理解する辞書データ</h2>
-        <p>すべての単語に日本語訳・例文・発音記号・類義語・対義語・派生語を収録。</p>
+        <h2>試験本番まで、<br>最速で準備する。</h2>
+        <p>過去問をAIで解析し、級ごとの頻出単語を選別。本当に出る単語だけを集中学習。間隔反復で確実に定着。</p>
+        <img src="images/eiken.png" alt="英検対策デッキ">
+    </div>
+    <div class="scroll-story-mobile-section">
+        <h2>10万語の詳細データで、<br>深く理解する。</h2>
+        <p>すべての単語に日本語訳・例文・発音記号・発音・類義語・対義語・派生語を収録。関連語はリンクでつながり、スムーズに単語力を広げられます。</p>
         <img src="images/dictionary.png" alt="単語詳細画面">
+    </div>
+    <div class="scroll-story-mobile-section">
+        <h2>テーマ別デッキで、興味から単語力を広げる</h2>
+        <p>料理・自然・スポーツ・ビジネス・医療・文化など、テーマ別デッキを収録。興味のある分野から始められるから、楽しく続けられます。</p>
+        <img src="images/themes.png" alt="テーマ別デッキ一覧">
+    </div>
+    <div class="scroll-story-mobile-section">
+        <h2>無料だけど広告なし。<br>集中を邪魔しない。</h2>
+        <p>英検3級までの単語にすべての機能が無料で使えます。もちろん広告は一切表示されません。</p>
+        <img src="images/memorize-session.png" alt="広告なしの学習画面">
+    </div>
+    <div class="scroll-story-mobile-section">
+        <h2>勉強は一生。<br>支払いは一度。</h2>
+        <p>買い切り型だから、一度購入すればずっと使えます。サブスクなし。今後のアップデートもすべて無料。</p>
+        <img src="images/stats.png" alt="学習統計画面">
     </div>
 </div>
 
-<!-- Numbers -->
-<section class="numbers">
-    <h2>数字で見る atango</h2>
-    <div class="number-grid">
-        <div class="number-item">
-            <div class="num">82,000+</div>
-            <div class="label">英単語</div>
-        </div>
-        <div class="number-item">
-            <div class="num">13,000+</div>
-            <div class="label">慣用句・フレーズ</div>
-        </div>
-        <div class="number-item">
-            <div class="num">20,000+</div>
-            <div class="label">ネイティブ発音</div>
-        </div>
-        <div class="number-item">
-            <div class="num">60+</div>
-            <div class="label">テーマ別デッキ</div>
-        </div>
-    </div>
-</section>
-
-<!-- Features -->
-<section id="features" class="features">
-    <div class="features-inner">
-        <h2>主な機能</h2>
-        <p class="section-sub">あなたの学習を、科学する</p>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#eef4ff;">&#x1F4F7;</div>
-                <h3>スキャン＆単語検出</h3>
-                <p>カメラ・写真・テキスト貼り付けから英文を読み取り、知らない単語を自動検出してデッキに追加。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#f0eeff;">&#x1F9E0;</div>
-                <h3>FSRS間隔反復</h3>
-                <p>科学的なアルゴリズムが記憶の定着度に合わせて最適なタイミングで復習を提示。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#fff4ec;">&#x1F4DA;</div>
-                <h3>10万語の辞書</h3>
-                <p>すべての単語に日本語訳・例文・発音記号・類義語を収録した充実のデータベース。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#ecfff4;">&#x1F3AF;</div>
-                <h3>英検5級〜1級対応</h3>
-                <p>級別・品詞別に整理されたデッキで、試験に出る単語を効率的にマスター。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#fff8ec;">&#x1F50A;</div>
-                <h3>ネイティブ発音</h3>
-                <p>20,000語以上のネイティブ発音音声で正しい発音も身につく。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="background:#f0f8ff;">&#x2601;&#xFE0F;</div>
-                <h3>iCloud同期</h3>
-                <p>カスタムデッキの作成、単語メモ、複数デバイス間の自動同期に対応。</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing -->
-<section id="pricing" class="pricing">
-    <h2>広告なし。サブスクなし。</h2>
-    <p class="section-sub">買い切り型だから、一度購入すればずっと使えます</p>
-    <div class="pricing-card">
-        <h3>atango プレミアム</h3>
-        <p class="price-note">無料版では英検3級レベルまでの単語をご利用いただけます。<br>プレミアム版ですべての単語とフレーズがアンロックされます。</p>
-        <ul>
-            <li>10万語以上の全データにアクセス</li>
-            <li>英検5級〜1級の全デッキ</li>
-            <li>60以上のテーマ別デッキ</li>
-            <li>20,000語以上のネイティブ発音</li>
-            <li>広告なし</li>
-            <li>今後のアップデートもすべて無料</li>
-        </ul>
-        <a href="https://apps.apple.com/app/atango" class="app-store-badge">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeからダウンロード">
-        </a>
-    </div>
-</section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>最短ルートで、語彙を身につけよう。</h2>
+    <h2>最短ルートで、単語力を身につけよう。</h2>
     <p>あなたの学習を邪魔するものは何もありません。</p>
     <a href="https://apps.apple.com/app/atango" class="app-store-badge">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeからダウンロード">
@@ -617,41 +591,66 @@
 <footer>
     <div class="footer-links">
         <a href="privacy.html">プライバシーポリシー</a>
-        <a href="contact.html">お問い合わせ</a>
     </div>
-    <p>&copy; 2025 atango. All rights reserved.</p>
+    <p>&copy; 2025-2026 Nerdis LLC. All rights reserved.</p>
 </footer>
 
 <script>
 (function() {
-    // Scroll Story: IntersectionObserver to swap images
-    var slides = document.querySelectorAll('.scroll-slide');
     var images = document.querySelectorAll('.scroll-story-images img');
+    if (images.length === 0) return;
 
-    if (slides.length === 0 || images.length === 0) return;
+    // Build waypoints: each slide, plus any [data-img] elements inside slides
+    var waypoints = [];
 
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                var index = parseInt(entry.target.getAttribute('data-index'), 10);
-                images.forEach(function(img, i) {
-                    if (i === index) {
-                        img.classList.add('active');
-                    } else {
-                        img.classList.remove('active');
-                    }
-                });
+    document.querySelectorAll('.scroll-slide').forEach(function(slide) {
+        var index = slide.getAttribute('data-index');
+        var inlineTriggers = slide.querySelectorAll('[data-img]');
+
+        // Slide itself is always a waypoint
+        waypoints.push({ el: slide, img: index });
+
+        // Add inline triggers (e.g. a <p data-img="0b"> inside the slide)
+        inlineTriggers.forEach(function(t) {
+            waypoints.push({ el: t, img: t.getAttribute('data-img') });
+        });
+    });
+
+    var currentImg = null;
+
+    function showImage(key) {
+        if (key === currentImg) return;
+        currentImg = key;
+        images.forEach(function(img) {
+            if (img.getAttribute('data-slide') === key) {
+                img.classList.add('active');
+            } else {
+                img.classList.remove('active');
             }
         });
-    }, {
-        root: null,
-        rootMargin: '-50% 0px -50% 0px',
-        threshold: 0
-    });
+    }
 
-    slides.forEach(function(slide) {
-        observer.observe(slide);
-    });
+    function onScroll() {
+        var mid = window.innerHeight / 2;
+        var best = null;
+        var bestDist = Infinity;
+
+        waypoints.forEach(function(wp) {
+            var rect = wp.el.getBoundingClientRect();
+            // Use the top of the element
+            var dist = mid - rect.top;
+            // Only consider elements that have scrolled past the center (dist >= 0)
+            if (dist >= 0 && dist < bestDist) {
+                bestDist = dist;
+                best = wp.img;
+            }
+        });
+
+        if (best !== null) showImage(best);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 })();
 </script>
 

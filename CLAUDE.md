@@ -16,7 +16,6 @@ This is a static website for atango (English vocabulary flashcard iOS app) hoste
 ## Page Structure
 
 - `index.html` - Main landing page (app features, numbers, pricing, CTA)
-- `contact.html` - Contact page with support email
 - `privacy.html` - Privacy policy page
 
 ## Development Workflow
