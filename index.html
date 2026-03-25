@@ -9,6 +9,8 @@
     <meta property="og:description" content="カメラで撮って即単語帳。科学が証明した暗記法で、最短ルートで単語力が身につく。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://atango.app/">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -50,6 +52,15 @@
             color: #1a1a2e;
             text-decoration: none;
             letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 7px;
         }
 
         nav a {
@@ -453,7 +464,7 @@
 
 <header>
     <div class="header-inner">
-        <a href="/" class="logo">Atango 最速英単語帳</a>
+        <a href="/" class="logo"><img src="images/icon.png" alt="Atango">Atango 最速英単語帳</a>
         <nav>
             <a href="privacy.html">プライバシー</a>
         </nav>
