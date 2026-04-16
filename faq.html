@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問 (FAQ) - Atango</title>
+    <meta name="description" content="Atangoに関するよくある質問。無料機能、プレミアム、返金、カスタム単語帳、スキャン機能、音声再生、データ同期についてご案内します。">
+    <link rel="canonical" href="https://atango.app/faq.html">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* ── Header ── */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #1a1a2e;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: 28px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #1a1a2e; }
+
+        /* ── Page Header ── */
+        .page-header {
+            padding: 120px 24px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #f0f4ff 0%, #fff 100%);
+        }
+
+        .page-header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .accent {
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* ── FAQ Content ── */
+        .faq-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        /* ── Category ── */
+        .faq-category {
+            margin-bottom: 48px;
+        }
+
+        .faq-category-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #888;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eef0f6;
+        }
+
+        /* ── Accordion ── */
+        .faq-item {
+            border-bottom: 1px solid #eef0f6;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 22px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .faq-question-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            line-height: 1.5;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon svg {
+            width: 12px;
+            height: 12px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.35s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 0 24px;
+        }
+
+        .faq-answer-inner p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 12px;
+        }
+
+        .faq-answer-inner p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer-inner ol,
+        .faq-answer-inner ul {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.85;
+            padding-left: 1.5em;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .faq-answer-inner li {
+            margin-bottom: 4px;
+        }
+
+        .faq-answer-inner a {
+            color: #2D6FD4;
+            text-decoration: none;
+        }
+
+        .faq-answer-inner a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Voice setup screenshots ── */
+        .faq-screenshots {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px 0 8px;
+            max-width: 600px;
+        }
+
+        .faq-screenshot-item {
+            text-align: center;
+        }
+
+        .faq-screenshot-item img {
+            width: 100%;
+            border-radius: 18px;
+            border: 1px solid #e0e4f0;
+            display: block;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .faq-screenshot-item .screenshot-label {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        /* ── Language toggle ── */
+        .lang-toggle {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1.5px solid #d0d5e8;
+            background: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #888;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #2D6FD4, #6358E0);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        .lang-btn:not(.active):hover {
+            border-color: #2D6FD4;
+            color: #2D6FD4;
+        }
+
+        /* Language visibility */
+        body.lang-ja .en-only { display: none; }
+        body.lang-en .ja-only { display: none; }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer a:hover { color: #fff; }
+
+        footer .footer-links { margin-bottom: 16px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .header-inner { height: 56px; }
+            .logo { font-size: 1.3rem; }
+            nav a { margin-left: 16px; font-size: 0.82rem; }
+            .page-header { padding: 100px 20px 48px; }
+            .faq-content { padding: 0 20px 72px; }
+            .faq-question-text { font-size: 0.98rem; }
+        }
+    </style>
+</head>
+<body class="lang-ja">
+
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">Atango</a>
+        <nav>
+            <a href="privacy.html">プライバシー</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page-header">
+    <h1><span class="accent">よくある質問</span></h1>
+    <p class="ja-only">Atangoについてのご質問にお答えします。</p>
+    <p class="en-only">Answers to common questions about Atango.</p>
+</div>
+
+<div class="faq-content">
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">日本語</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- Free & Premium -->
+    <div class="faq-category">
+        <div class="faq-category-title ja-only">無料・プレミアム</div>
+        <div class="faq-category-title en-only">Free &amp; Premium</div>
+
+        <!-- faq_free_features -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">無料で何が使えますか？</span>
+                <span class="faq-question-text en-only">What can I use for free?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">無料版では、フラッシュカードの閲覧、間隔反復による暗記、スキャン、カスタム単語帳の作成、辞書検索など、すべての機能をご利用いただけます。</p>
+                    <p class="ja-only">英検3級以下（5級・4級・3級）の単語が無料で利用できます。</p>
+                    <p class="en-only">The free version gives you full access to all app features — flashcard browsing, spaced repetition memorization, scanning, custom deck creation, and dictionary search.</p>
+                    <p class="en-only">Words from Eiken Grade 3 and below (Grades 5, 4, and 3) are available for free.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_premium -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">プレミアムには何が含まれますか？</span>
+                <span class="faq-question-text en-only">What does the Premium upgrade include?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">プレミアムでは、10万語以上のアプリ内辞書のすべての語句がアンロックされます。すべての英検級、すべてのテーマデッキ、辞書検索の全結果が利用可能になります。</p>
+                    <p class="ja-only">買い切りの1回払いです。サブスクリプションではありません。一度購入すれば、ずっとご利用いただけます。</p>
+                    <p class="en-only">Premium unlocks the entire built-in dictionary of over 100,000 words and phrases. This includes all Eiken grades, all theme decks, and the full dictionary search results.</p>
+                    <p class="en-only">It is a one-time purchase — not a subscription. You pay once and keep access forever.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_refund -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">返金を希望する場合は？</span>
+                <span class="faq-question-text en-only">How do I request a refund?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">返金はAppleが受け付けています。<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> にアクセスして、購入に対する返金リクエストを送信してください。</p>
+                    <p class="en-only">Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to submit a refund request for your purchase.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="faq-category">
+        <div class="faq-category-title ja-only">機能について</div>
+        <div class="faq-category-title en-only">Features</div>
+
+        <!-- faq_custom_decks -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">自分の単語帳を作れますか？</span>
+                <span class="faq-question-text en-only">Can I create my own decks?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">はい。スキャン機能（カメラ、写真、テキスト入力）を使うか、辞書検索の結果から単語を追加してカスタム単語帳を作成できます。カスタム単語帳には好きな名前、アイコン、色を設定できます。</p>
+                    <p class="en-only">Yes. You can create custom decks using the Scan feature (camera, photos, or text input) or by adding words from dictionary search results. Custom decks can be given a name, icon, and color of your choice.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_scan_feature -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">スキャン機能の使い方は？</span>
+                <span class="faq-question-text en-only">How does the Scan feature work?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">スキャン機能は3つの方法で英単語を検出します。</p>
+                    <ul class="ja-only">
+                        <li>カメラでスキャン — カメラをテキストに向けて単語を読み取ります。</li>
+                        <li>写真から読み込み — ライブラリから写真を選択します。</li>
+                        <li>テキスト入力 — テキストを直接入力または貼り付けます。</li>
+                    </ul>
+                    <p class="ja-only">認識された単語は辞書と照合され、カスタム単語帳に追加できます。</p>
+                    <p class="en-only">The Scan feature detects English words from three sources:</p>
+                    <ul class="en-only">
+                        <li>Scan with Camera — Point your camera at text to capture words.</li>
+                        <li>Import from Photos — Select a photo from your library.</li>
+                        <li>Enter Text — Type or paste text directly.</li>
+                    </ul>
+                    <p class="en-only">Recognized words are matched against the dictionary, and you can add them to your custom decks.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_sync_devices -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">データはデバイス間で同期されますか？</span>
+                <span class="faq-question-text en-only">Is my data synced across devices?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">カスタム単語帳と単語帳の学習設定は、同じApple Accountでサインインしたデバイス間でiCloud経由で同期されます。暗記の進捗（FSRSの復習履歴）は各デバイスにローカル保存されます。</p>
+                    <p class="en-only">Custom decks and deck study settings are synced via iCloud across your devices signed in with the same Apple Account. Memorization progress (FSRS review history) is stored locally on each device.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio & Pronunciation -->
+    <div class="faq-category">
+        <div class="faq-category-title ja-only">音声・発音</div>
+        <div class="faq-category-title en-only">Audio &amp; Pronunciation</div>
+
+        <!-- faq_no_audio -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">音声が再生されません</span>
+                <span class="faq-question-text en-only">Why can't I hear any pronunciation audio?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">このアプリはiOSの読み上げ機能を使用しています。プレミアムまたは拡張音声が必要ですが、初期状態ではインストールされていません。</p>
+                    <p class="ja-only">ダウンロード手順：</p>
+                    <ol class="ja-only">
+                        <li>設定アプリを開く</li>
+                        <li>アクセシビリティ をタップ</li>
+                        <li>リーダーと読み上げ をタップ</li>
+                        <li>声 をタップ</li>
+                        <li>英語 を選択</li>
+                        <li>声 をタップ</li>
+                        <li>拡張またはプレミアムと表示されている音声をダウンロード</li>
+                    </ol>
+                    <p class="ja-only">音声をインストール後、フラッシュカードや単語詳細画面のスピーカーアイコンをタップすると発音が再生されます。</p>
+                    <p class="en-only">This app uses iOS's built-in text-to-speech engine. Premium or Enhanced voices are required, but they are not installed by default.</p>
+                    <p class="en-only">To download them:</p>
+                    <ol class="en-only">
+                        <li>Open the iPhone Settings app.</li>
+                        <li>Go to Accessibility &gt; Read &amp; Speak &gt; Voices.</li>
+                        <li>Tap English.</li>
+                        <li>Tap Voice.</li>
+                        <li>Download any voice marked as Enhanced or Premium.</li>
+                    </ol>
+                    <p class="en-only">Once a voice is installed, tap the speaker icon on a flashcard or word detail screen to hear the pronunciation.</p>
+                    <div class="faq-screenshots ja-only">
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s1_accessibility.jpg" alt="設定 > アクセシビリティ">
+                            <p class="screenshot-label">② アクセシビリティ</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s2_reader_speak.jpg" alt="リーダーと読み上げ">
+                            <p class="screenshot-label">③ リーダーと読み上げ</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s3_voices.jpg" alt="声">
+                            <p class="screenshot-label">④ 声</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s4_english.jpg" alt="英語を選択">
+                            <p class="screenshot-label">⑤ 英語を選択</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s5_voice_select.jpg" alt="声をタップ">
+                            <p class="screenshot-label">⑥ 声</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s6_download.jpg" alt="音声をダウンロード">
+                            <p class="screenshot-label">⑦ ダウンロード</p>
+                        </div>
+                    </div>
+                    <div class="faq-screenshots en-only">
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s1_accessibility.jpg" alt="Settings > Accessibility">
+                            <p class="screenshot-label">② Accessibility</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s2_reader_speak.jpg" alt="Read & Speak">
+                            <p class="screenshot-label">③ Read &amp; Speak</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s3_voices.jpg" alt="Voices">
+                            <p class="screenshot-label">④ Voices</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s4_english.jpg" alt="Tap English">
+                            <p class="screenshot-label">⑤ English</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s5_voice_select.jpg" alt="Tap Voice">
+                            <p class="screenshot-label">⑥ Voice</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s6_download.jpg" alt="Download Enhanced or Premium">
+                            <p class="screenshot-label">⑦ Download</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_change_voice -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-question-text ja-only">発音の音声を変更できますか？</span>
+                <span class="faq-question-text en-only">Can I change the pronunciation voice?</span>
+                <span class="faq-icon">
+                    <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+                </span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p class="ja-only">はい。設定 &gt; 発音 で利用可能な音声の選択や、読み上げ速度・音量の調整ができます。</p>
+                    <p class="ja-only">このアプリではプレミアムまたは拡張音声が必要ですが、初期状態ではインストールされていません。ダウンロードするには、設定アプリ &gt; アクセシビリティ &gt; リーダーと読み上げ &gt; 声 &gt; 英語 &gt; 声 に進み、拡張またはプレミアムと表示されている音声をダウンロードしてください。</p>
+                    <p class="en-only">Yes. Go to Settings &gt; Pronunciation to select from available voices and adjust the speaking speed and volume.</p>
+                    <p class="en-only">This app requires premium or enhanced voices, which are not installed by default. To download them, open the iPhone Settings app and go to Accessibility &gt; Read &amp; Speak &gt; Voices &gt; English &gt; Voice, then download any voice marked as Enhanced or Premium.</p>
+                    <div class="faq-screenshots ja-only">
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s1_accessibility.jpg" alt="設定 > アクセシビリティ">
+                            <p class="screenshot-label">アクセシビリティ</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s2_reader_speak.jpg" alt="リーダーと読み上げ">
+                            <p class="screenshot-label">リーダーと読み上げ</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s3_voices.jpg" alt="声">
+                            <p class="screenshot-label">声</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s4_english.jpg" alt="英語を選択">
+                            <p class="screenshot-label">英語を選択</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s5_voice_select.jpg" alt="声をタップ">
+                            <p class="screenshot-label">声</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_s6_download.jpg" alt="音声をダウンロード">
+                            <p class="screenshot-label">ダウンロード</p>
+                        </div>
+                    </div>
+                    <div class="faq-screenshots en-only">
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s1_accessibility.jpg" alt="Settings > Accessibility">
+                            <p class="screenshot-label">Accessibility</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s2_reader_speak.jpg" alt="Read & Speak">
+                            <p class="screenshot-label">Read &amp; Speak</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s3_voices.jpg" alt="Voices">
+                            <p class="screenshot-label">Voices</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s4_english.jpg" alt="Tap English">
+                            <p class="screenshot-label">English</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s5_voice_select.jpg" alt="Tap Voice">
+                            <p class="screenshot-label">Voice</p>
+                        </div>
+                        <div class="faq-screenshot-item">
+                            <img src="images/faq_voice_en_s6_download.jpg" alt="Download Enhanced or Premium">
+                            <p class="screenshot-label">Download</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+    <p>&copy; 2025-2026 Nerdis LLC. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+
+    // Close all open items
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    // Open clicked item if it was closed
+    if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+}
+
+function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+    // Recalculate open answer height after language switch
+    var openItem = document.querySelector('.faq-item.open');
+    if (openItem) {
+        var answer = openItem.querySelector('.faq-answer');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+}
+</script>
+
+</body>
+</html>
